@@ -13,8 +13,8 @@
     }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Noto Sans KR", sans-serif;
-      background: #eef4fb;
+      font-family: -apple-system, BlinkMacSystemFont, "Noto Sans KR", "Apple SD Gothic Neo", sans-serif;
+      background: linear-gradient(180deg, #dff3ff 0%, #f5fbff 45%, #ffffff 100%);
       color: #10233f;
     }
 
@@ -24,132 +24,259 @@
       margin: 0 auto;
       background: #ffffff;
       overflow: hidden;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+      box-shadow: 0 12px 40px rgba(8, 43, 95, 0.16);
     }
 
     .hero {
       position: relative;
-      height: 58vh;
-      padding: 42px 24px;
-      text-align: center;
+      min-height: 54vh;
+      padding: 34px 24px 120px;
       color: #ffffff;
       background:
-        linear-gradient(rgba(10,35,70,0.25), rgba(10,35,70,0.15)),
-        url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80");
+        linear-gradient(
+          180deg,
+          rgba(5, 38, 75, 0.24) 0%,
+          rgba(5, 38, 75, 0.10) 45%,
+          rgba(255, 255, 255, 0.06) 100%
+        ),
+        url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=85");
       background-size: cover;
       background-position: center;
     }
 
+    .top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 72px;
+    }
+
     .logo {
-      font-size: 20px;
+      font-size: 22px;
       letter-spacing: 3px;
-      margin-bottom: 60px;
-      font-weight: 600;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .logo span {
+      display: block;
+      margin-top: 5px;
+      font-size: 9px;
+      letter-spacing: 2px;
+      font-weight: 500;
+      opacity: 0.9;
+    }
+
+    .menu {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.18);
+      backdrop-filter: blur(8px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 21px;
+    }
+
+    .hero-text {
+      text-align: left;
+    }
+
+    .eyebrow {
+      font-size: 15px;
+      font-weight: 500;
+      margin-bottom: 16px;
+      opacity: 0.96;
     }
 
     .hero h1 {
-      font-size: 30px;
-      line-height: 1.4;
+      font-size: 31px;
+      line-height: 1.35;
+      font-weight: 800;
+      letter-spacing: -1px;
+      text-shadow: 0 4px 14px rgba(0,0,0,0.25);
       margin-bottom: 18px;
-      text-shadow: 0 3px 12px rgba(0,0,0,0.25);
     }
 
     .hero p {
       font-size: 16px;
-      opacity: 0.95;
+      line-height: 1.55;
+      opacity: 0.96;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.22);
     }
 
     .card {
       position: relative;
-      margin-top: -55px;
-      padding: 34px 22px 36px;
+      margin-top: -76px;
+      padding: 34px 22px 32px;
       background: #ffffff;
-      border-radius: 32px 32px 0 0;
+      border-radius: 34px 34px 0 0;
     }
 
-    .card h2 {
+    .card::before {
+      content: "";
+      position: absolute;
+      top: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 48px;
+      height: 5px;
+      border-radius: 99px;
+      background: #d9e7f4;
+    }
+
+    .section-title {
+      margin-top: 20px;
+      margin-bottom: 26px;
       text-align: center;
+    }
+
+    .section-title h2 {
       font-size: 22px;
-      margin-bottom: 28px;
+      line-height: 1.35;
+      font-weight: 800;
       color: #10233f;
+      letter-spacing: -0.5px;
+    }
+
+    .section-title p {
+      margin-top: 8px;
+      font-size: 14px;
+      color: #6d7d90;
     }
 
     .btn {
       display: flex;
       align-items: center;
-      justify-content: space-between;
       width: 100%;
-      padding: 22px;
-      margin-bottom: 18px;
-      border-radius: 20px;
+      min-height: 112px;
+      padding: 22px 20px;
+      margin-bottom: 16px;
+      border-radius: 24px;
       text-decoration: none;
-      transition: 0.2s;
+      transition: all 0.22s ease;
     }
 
     .btn:hover {
-      transform: translateY(-2px);
+      transform: translateY(-3px);
     }
 
     .btn-main {
-      background: linear-gradient(135deg, #082b5f, #0f4a8a);
+      background: linear-gradient(135deg, #003f82 0%, #0067b8 100%);
       color: #ffffff;
-      box-shadow: 0 10px 24px rgba(8,43,95,0.25);
+      box-shadow: 0 16px 30px rgba(0, 91, 171, 0.28);
     }
 
     .btn-sub {
       background: #ffffff;
       color: #10233f;
-      border: 1px solid #d9e3f2;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+      border: 1px solid #dfe9f5;
+      box-shadow: 0 12px 26px rgba(16, 35, 63, 0.08);
     }
 
     .icon {
       width: 58px;
       height: 58px;
-      border-radius: 50%;
+      border-radius: 20px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 28px;
+      font-size: 27px;
       margin-right: 16px;
       flex-shrink: 0;
     }
 
     .btn-main .icon {
-      background: rgba(255,255,255,0.15);
+      background: rgba(255,255,255,0.16);
     }
 
     .btn-sub .icon {
-      background: #eef4fb;
+      background: #eef7ff;
     }
 
     .text {
       flex: 1;
+      min-width: 0;
     }
 
     .text strong {
       display: block;
       font-size: 21px;
-      margin-bottom: 7px;
+      line-height: 1.32;
+      font-weight: 800;
+      margin-bottom: 8px;
+      letter-spacing: -0.5px;
     }
 
     .text span {
       display: block;
       font-size: 14px;
-      line-height: 1.4;
-      opacity: 0.8;
+      line-height: 1.5;
+      opacity: 0.82;
     }
 
     .arrow {
-      font-size: 32px;
+      font-size: 34px;
       margin-left: 12px;
+      opacity: 0.9;
+    }
+
+    .note {
+      margin-top: 24px;
+      padding: 18px 16px;
+      border-radius: 20px;
+      background: linear-gradient(180deg, #f4faff 0%, #ffffff 100%);
+      border: 1px solid #e3edf7;
+      text-align: center;
+    }
+
+    .note strong {
+      display: block;
+      font-size: 15px;
+      margin-bottom: 6px;
+      color: #0c3b72;
+    }
+
+    .note span {
+      display: block;
+      font-size: 13px;
+      line-height: 1.55;
+      color: #6d7d90;
     }
 
     .footer {
+      padding: 26px 20px 30px;
       text-align: center;
-      font-size: 13px;
       color: #7b8794;
-      padding-top: 12px;
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .footer .brand {
+      display: block;
+      margin-bottom: 4px;
+      color: #0c3b72;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+    }
+
+    @media (max-width: 360px) {
+      .hero {
+        padding: 30px 20px 110px;
+      }
+
+      .hero h1 {
+        font-size: 28px;
+      }
+
+      .text strong {
+        font-size: 19px;
+      }
+
+      .btn {
+        padding: 20px 18px;
+      }
     }
   </style>
 </head>
@@ -158,18 +285,34 @@
   <div class="wrap">
 
     <section class="hero">
-      <div class="logo">SONO RESORT</div>
+      <div class="top">
+        <div class="logo">
+          SONO
+          <span>HOTELS & RESORTS</span>
+        </div>
+        <div class="menu">☰</div>
+      </div>
 
-      <h1>
-        프리미엄 휴식의 가치,<br />
-        리조트 회원권 안내
-      </h1>
+      <div class="hero-text">
+        <div class="eyebrow">소노호텔앤리조트 회원권</div>
 
-      <p>자연과 품격이 함께하는 특별한 공간</p>
+        <h1>
+          프리미엄 휴식의 가치,<br />
+          리조트 회원권 안내
+        </h1>
+
+        <p>
+          자연과 품격이 함께하는<br />
+          특별한 여름의 공간
+        </p>
+      </div>
     </section>
 
     <section class="card">
-      <h2>원하시는 정보를 선택해주세요</h2>
+      <div class="section-title">
+        <h2>원하시는 정보를 선택해주세요</h2>
+        <p>상담 연결과 회원권 안내를 바로 확인하실 수 있습니다.</p>
+      </div>
 
       <!-- 모바일 전화 상담 연결 -->
       <a class="btn btn-main" href="tel:01052145761">
@@ -181,8 +324,8 @@
         <div class="arrow">›</div>
       </a>
 
-      <!-- 리조트 현황 보기 연결 -->
-      <a class="btn btn-sub" href="https://blog.naver.com/kng114/224288998718" target="_blank">
+      <!-- 회원권 분양 안내 연결 -->
+      <a class="btn btn-sub" href="https://blog.naver.com/kng114/224288998718" target="_blank" rel="noopener noreferrer">
         <div class="icon">🏨</div>
         <div class="text">
           <strong>회원권 분양 안내</strong>
@@ -191,7 +334,16 @@
         <div class="arrow">›</div>
       </a>
 
+      <div class="note">
+        <strong>강낭구 LC가 직접 안내드립니다.</strong>
+        <span>
+          고객님의 휴식 목적과 이용 스타일에 맞춰<br />
+          소노호텔앤리조트 회원권을 상담해드립니다.
+        </span>
+      </div>
+
       <div class="footer">
+        <span class="brand">SONO HOTELS & RESORTS</span>
         강낭구 LC · 소노호텔앤리조트
       </div>
     </section>
