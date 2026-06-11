@@ -14,8 +14,8 @@
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Noto Sans KR", "Apple SD Gothic Neo", sans-serif;
-      background: linear-gradient(180deg, #dff3ff 0%, #f5fbff 45%, #ffffff 100%);
-      color: #10233f;
+      background: #eaf5fb;
+      color: #0f2d4f;
     }
 
     .wrap {
@@ -24,17 +24,320 @@
       margin: 0 auto;
       background: #ffffff;
       overflow: hidden;
-      box-shadow: 0 12px 40px rgba(8, 43, 95, 0.16);
+      box-shadow: 0 14px 40px rgba(0, 34, 80, 0.18);
     }
 
+    /* 상단 여름 리조트 이미지 영역 */
     .hero {
       position: relative;
-      min-height: 54vh;
-      padding: 34px 24px 120px;
-      color: #ffffff;
+      min-height: 55vh;
+      padding: 34px 26px 120px;
       background:
         linear-gradient(
           180deg,
+          rgba(255,255,255,0.15) 0%,
+          rgba(255,255,255,0.25) 42%,
+          rgba(255,255,255,0.05) 100%
+        ),
+        url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=85");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .logo {
+      font-size: 32px;
+      letter-spacing: 3px;
+      font-weight: 500;
+      color: #06366d;
+      line-height: 1;
+      margin-bottom: 74px;
+    }
+
+    .logo span {
+      display: block;
+      margin-top: 6px;
+      font-size: 10px;
+      letter-spacing: 2px;
+      font-weight: 600;
+    }
+
+    .hero-text {
+      color: #092f5f;
+    }
+
+    .hero-text .small {
+      font-size: 17px;
+      font-weight: 600;
+      margin-bottom: 18px;
+    }
+
+    .hero-text h1 {
+      font-size: 33px;
+      line-height: 1.34;
+      font-weight: 800;
+      letter-spacing: -1.4px;
+      margin-bottom: 18px;
+    }
+
+    .hero-text p {
+      font-size: 18px;
+      line-height: 1.55;
+      color: #335879;
+      font-weight: 500;
+    }
+
+    /* 하단 흰색 선택 영역 */
+    .content {
+      position: relative;
+      margin-top: -70px;
+      padding: 36px 22px 30px;
+      background: #ffffff;
+      border-radius: 34px 34px 0 0;
+    }
+
+    .title {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .title h2 {
+      font-size: 23px;
+      line-height: 1.35;
+      font-weight: 800;
+      color: #0f2d4f;
+      letter-spacing: -0.8px;
+    }
+
+    .title p {
+      margin-top: 9px;
+      font-size: 14px;
+      color: #718296;
+      line-height: 1.5;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      min-height: 112px;
+      padding: 22px 20px;
+      margin-bottom: 17px;
+      border-radius: 25px;
+      text-decoration: none;
+      transition: 0.22s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+    }
+
+    .btn-main {
+      color: #ffffff;
+      background: linear-gradient(135deg, #003f82 0%, #0063b3 100%);
+      box-shadow: 0 16px 30px rgba(0, 75, 145, 0.28);
+    }
+
+    .btn-sub {
+      color: #0f2d4f;
+      background: #ffffff;
+      border: 1px solid #dfe9f3;
+      box-shadow: 0 12px 26px rgba(20, 50, 90, 0.08);
+    }
+
+    .icon {
+      width: 62px;
+      height: 62px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 17px;
+      font-size: 29px;
+      flex-shrink: 0;
+    }
+
+    .btn-main .icon {
+      background: rgba(255, 255, 255, 0.16);
+    }
+
+    .btn-sub .icon {
+      background: #eef7ff;
+    }
+
+    .btn-text {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .btn-text strong {
+      display: block;
+      font-size: 21px;
+      line-height: 1.35;
+      font-weight: 800;
+      letter-spacing: -0.6px;
+      margin-bottom: 8px;
+    }
+
+    .btn-text span {
+      display: block;
+      font-size: 14px;
+      line-height: 1.45;
+      opacity: 0.82;
+    }
+
+    .arrow {
+      font-size: 34px;
+      margin-left: 10px;
+      opacity: 0.9;
+    }
+
+    .contact {
+      margin-top: 28px;
+      padding: 18px 8px 4px;
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      border-top: 1px solid #edf2f7;
+      color: #315472;
+      font-size: 12px;
+      line-height: 1.45;
+      text-align: center;
+    }
+
+    .contact a {
+      color: #0b4c8c;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .contact-item {
+      flex: 1;
+    }
+
+    .contact-item .mark {
+      display: block;
+      font-size: 20px;
+      margin-bottom: 6px;
+    }
+
+    .footer {
+      margin-top: 22px;
+      padding: 18px 10px 4px;
+      text-align: center;
+      color: #0b3d74;
+      font-size: 13px;
+      letter-spacing: 2px;
+      font-weight: 600;
+    }
+
+    @media (max-width: 360px) {
+      .hero {
+        padding: 30px 22px 110px;
+      }
+
+      .logo {
+        font-size: 28px;
+        margin-bottom: 62px;
+      }
+
+      .hero-text h1 {
+        font-size: 29px;
+      }
+
+      .hero-text p {
+        font-size: 16px;
+      }
+
+      .btn {
+        padding: 20px 18px;
+      }
+
+      .btn-text strong {
+        font-size: 19px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <section class="hero">
+      <div class="logo">
+        SONO
+        <span>HOTELS & RESORTS</span>
+      </div>
+
+      <div class="hero-text">
+        <div class="small">소노호텔앤리조트 회원권</div>
+
+        <h1>
+          프리미엄 휴식의 가치,<br />
+          리조트 회원권 안내
+        </h1>
+
+        <p>
+          자연과 품격이 함께하는<br />
+          특별한 공간
+        </p>
+      </div>
+    </section>
+
+    <section class="content">
+      <div class="title">
+        <h2>원하시는 정보를 선택해주세요</h2>
+        <p>상담 연결과 회원권 안내를 바로 확인하실 수 있습니다.</p>
+      </div>
+
+      <!-- 모바일 전화 상담 연결 -->
+      <a class="btn btn-main" href="tel:01052145761">
+        <div class="icon">📞</div>
+        <div class="btn-text">
+          <strong>모바일로 바로 상담하기</strong>
+          <span>강낭구 LC와 바로 전화 상담이 가능합니다.</span>
+        </div>
+        <div class="arrow">›</div>
+      </a>
+
+      <!-- 회원권 분양 안내 연결 -->
+      <a class="btn btn-sub" href="https://blog.naver.com/kng114/224288998718" target="_blank" rel="noopener noreferrer">
+        <div class="icon">🏨</div>
+        <div class="btn-text">
+          <strong>회원권 분양 안내</strong>
+          <span>현재 분양중인 소노러스 라임 회원권 안내.</span>
+        </div>
+        <div class="arrow">›</div>
+      </a>
+
+      <div class="contact">
+        <div class="contact-item">
+          <span class="mark">☎</span>
+          <a href="tel:0221865755">02-2186-5755</a><br />
+          직통
+        </div>
+
+        <div class="contact-item">
+          <span class="mark">📱</span>
+          <a href="tel:01052145761">010-5214-5761</a><br />
+          핸드폰
+        </div>
+
+        <div class="contact-item">
+          <span class="mark">🟢</span>
+          <a href="https://blog.naver.com/kng114" target="_blank" rel="noopener noreferrer">
+            blog.naver.com/kng114
+          </a>
+        </div>
+      </div>
+
+      <div class="footer">
+        SONO HOTELS & RESORTS
+      </div>
+    </section>
+
+  </div>
+</body>
+</html>          180deg,
           rgba(5, 38, 75, 0.24) 0%,
           rgba(5, 38, 75, 0.10) 45%,
           rgba(255, 255, 255, 0.06) 100%
